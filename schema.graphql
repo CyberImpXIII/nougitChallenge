@@ -1,0 +1,60 @@
+type Query {
+  info: String!
+  getEntries(filter: String, first: Int = 5, skip: Int, orderBy: EntryOrderByInput = "date_DESC") : [Entry!]
+  getAuthors : [Author!]
+}
+
+
+type Entry {
+    author: Author!
+    date: String!
+    popularity: Float!
+    isTrending: Boolean!
+    title: String!
+    description: String!
+    numComments: Int!
+    thumbnail: String!
+    codeSubmissionTotal: Int!
+    pledgeTotal: Float!
+    pledgeGoal: Float!
+    pledgerCount: Int!
+    status: String!
+},
+
+type Author{
+    id: ID
+    name: String!
+    picture: String!
+    score: Float!
+}
+
+input AuthorInput{
+    name: String!
+    picture: String!
+    score: Float!
+}
+
+type Mutation {
+    createEntry(
+        author: AuthorInput!,
+        date: String!, 
+        popularity: Float!, 
+        isTrending: Boolean!, 
+        title: String!, 
+        description: String!, 
+        numComments: Int!, 
+        thumbnail: String!, 
+        codeSubmissionTotal: Int!, 
+        pledgeTotal: Float!, 
+        pledgeGoal: Float!, 
+        pledgerCount: Int!, 
+        status: Int!
+    ) : Entry!
+},
+
+enum EntryOrderByInput {
+    popularity_ASC
+    popularity_DESC
+    date_ASC
+    date_DESC
+}

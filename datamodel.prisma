@@ -1,0 +1,24 @@
+type Entry {
+    id: ID! @id
+    createdAt: DateTime! @createdAt
+    author: Author!
+    date: String!
+    popularity: Float!
+    isTrending: Boolean!
+    title: String!
+    description: String!
+    numComments: Int!
+    thumbnail: String!
+    codeSubmissionTotal: Int!
+    pledgeTotal: Float!
+    pledgeGoal: Float!
+    pledgerCount: Int!
+    status: Int!
+},
+
+type Author{
+    id: ID! @id
+    name: String!
+    picture: String!
+    score: Float!
+}

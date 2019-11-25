@@ -1,22 +1,237 @@
 .App {
-  text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
+.selected{
+  background-color:rgb(89	94 105) !important;	
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filterWidget{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 700px;
+  margin: auto;
 }
 
-.App-link {
-  color: #09d3ac;
+.widgetButton{
+  background-color: rgb(170	171	175	);
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: white;
+  margin: 10px;
+}
+
+.filterText{
+  margin: 20px;
+}
+
+.header{
+  display: flex;
+}
+
+.entry{
+  position: relative;
+  width: 600px;
+  border: 1px solid rgb(151	156	168	);
+  border-radius: 15px;
+  margin: 15px auto 15px auto;
+  overflow: hidden;
+}
+
+.userImage{
+  position: relative;
+  border-radius: 50%;
+  border: rgb(151	156	168	) 1px solid;
+  height: 60px;
+  object-fit: cover;
+  position: reative;
+  margin: 15px;
+  width: 60px;
+  padding: 3px;
+  background-clip: content-box; /* support: IE9+ */
+  background-color: white;
+}
+
+.userName{
+  padding-top: 25px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.userTitle{
+  position: absolute;
+  left: 100px;
+  top: 55px;
+  font-size: 14px;
+  color: rgb(151	156	168	);
+}
+
+.status{
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  color: white;
+  padding: 3px 25px;
+  border-radius: 25px;
+  font-size: 12px;
+}
+
+.Closed{
+  background-color: rgb(34	208	151	);
+}
+
+.trending{
+  background-color: rgb(246	74	102	);
+}
+
+.content{
+  padding: 25px 20px 70px 20px;
+}
+
+.entryText{
+  font-size: 15px;
+  line-height: 25px;
+  padding-bottom: 15px;
+}
+
+.entryTitle{
+  padding-bottom: 10px; 
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.thumbnail{
+  width: 200px;
+  height: 140px;
+  object-fit:contain;
+  border: 1px rgb(235	235	235) solid;
+}
+
+.dashbox{
+  border: 1px solid rgb(151	156	168	);
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.pledgeInfo{
+  padding: 24px 24px 10px 32px;
+}
+
+.trendingPledge{
+  color: rgb(59	195	224);
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.closedPledge{
+  color: rgb(34	208	151	); 
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.openPledge{
+
+}
+
+.pledgeGoal{
+  font-size: 14px;
+  color: rgb(151	156	168	);
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+.pledgerTotal{
+  color: rgb(151	156	168	);
+  padding-top: 10px;
+}
+
+.pledgeButton{
+  font-size: 12px;
+  position: relative;
+  left: 20px;
+  top: 60px;
+  padding: 5px 20px;
+  border-radius: 25px;
+}
+
+.trendingButton{
+  color: rgb(59	195	224);
+  border: 1px solid  rgb(59	195	224);
+}
+
+.closedButton{
+  padding-left: 15px;
+  padding-right: 15px;
+  color: rgb(97	222	183);
+  border: 1px solid  rgb(97	222	183);
+}
+
+.dashFooter{
+  color: rgb(183	188	200);
+  font-size: 14px;	
+  position: relative;
+  width:100%;
+  height: 50px;
+  background-color: rgb(244	244	246	);
+  display: flex;
+  border-top: solid 1px rgb(226	227	233);
+}
+
+.viewSource{
+  padding: 15px;
+}
+
+.codeSubmissions{
+  padding: 15px;
+}
+
+.claimButton{
+  font-size: 14px;
+  position: absolute;
+  padding: 17px 32px;
+  right: 0px;
+  background-color: rgb(59	195	224	);
+  color: white;
+  font-weight: bold;
+}
+
+.contentFooter{
+  display: flex;
+  position: absolute;
+  bottom:  0px;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(243	243	245	);
+}
+
+.comments{
+  font-weight: bold;
+  margin: 15px 30px 50px 0px;
+  color: rgb(175	180	194	);
+}
+
+.share{
+  font-weight: bold;
+  margin: 15px 100px 15px 0px;
+  color: rgb(175	180	194	);
+}
+
+.more{
+  position: absolute;
+  right: 0px;
+}
+
+.commentSVG{
+  margin: 15px 5px 15px 15px;
+}
+
+.shareSVG{
+  margin: 15px 5px 15px 15px;
+}
+
+.moreSVG{
+  margin: 12px 25px 12px 0px; 
 }

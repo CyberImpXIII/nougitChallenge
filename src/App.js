@@ -4,6 +4,7 @@ import './App.css'
 import {ReactComponent as CommentIcon} from './svg/comment-white-oval-bubble.svg'
 import {ReactComponent as ShareIcon} from './svg/share-option.svg'
 import {ReactComponent as MoreIcon} from './svg/more.svg'
+import FilterWidget from './components/FilterWidget.js'
 
 
 const client = new ApolloClient({
@@ -170,33 +171,16 @@ function App() {
 
   return (
     <div className="App">
-      <div className='filterWidget'>
-        <div className='filterText'>Filter by:</div>
-        <div className={allSelected ? 'widgetButton selected' : 'widgetButton'} onClick={()=>{
-          setAllSelected(true);
-          setCompletedSelected(false);
-          setTrendingSelected(false);
-          setOpenSelected(false);
-        }}>All</div>
-        <div className={trendingSelected ? 'widgetButton selected' : 'widgetButton'} onClick={()=>{
-          setAllSelected(false);
-          setCompletedSelected(false);
-          setTrendingSelected(true);
-          setOpenSelected(false);
-        }}>Trending</div>
-        <div className={openSelected ? 'widgetButton selected' : 'widgetButton'} onClick={()=>{
-          setAllSelected(false);
-          setCompletedSelected(false);
-          setTrendingSelected(false);
-          setOpenSelected(true);
-        }}>Open Tasks</div>
-        <div className={completedSelected ? 'widgetButton selected' : 'widgetButton'} onClick={()=>{
-          setAllSelected(false);
-          setCompletedSelected(true);
-          setTrendingSelected(false);
-          setOpenSelected(false);
-        }}>Completed Tasks</div>
-      </div>
+      <FilterWidget 
+        allSelected={allSelected}
+        trendingSelected={allSelected}
+        openSelected={allSelected}
+        completedSelected={allSelected}
+        setAllSelected={setAllSelected}
+        setCompletedSelected={setCompletedSelected}
+        setTrendingSelected={setTrendingSelected}
+        setOpenSelected={setOpenSelected}
+      />
       {entries && entries.map((entry, i)=>(
       <div className='entry' key={`entry${i}`}>
         <div className= 'header'>

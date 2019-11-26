@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ApolloClient, { gql } from 'apollo-boost';
 import './App.css'
-import {ReactComponent as CommentIcon} from './comment-white-oval-bubble.svg'
-import {ReactComponent as ShareIcon} from './share-option.svg'
-import {ReactComponent as MoreIcon} from './more.svg'
+import {ReactComponent as CommentIcon} from './svg/comment-white-oval-bubble.svg'
+import {ReactComponent as ShareIcon} from './svg/share-option.svg'
+import {ReactComponent as MoreIcon} from './svg/more.svg'
 
 
 const client = new ApolloClient({
